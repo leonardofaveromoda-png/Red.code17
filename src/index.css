@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #DC2626;
+  --accent-glow: rgba(220, 38, 38, 0.4);
+  --glass: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+.medical-gradient {
+  background: radial-gradient(circle at 10% 10%, rgba(220, 38, 38, 0.15) 0%, transparent 45%),
+              radial-gradient(circle at 90% 90%, rgba(153, 27, 27, 0.12) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(17, 24, 39, 0.6) 0%, transparent 80%);
+}
+
+.input-dark {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: #f3f4f6;
+  border-radius: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Garante espaçamento impecável quando o input possui ícone posicionado à esquerda */
+.has-icon-left,
+.input-with-icon,
+.input-dark.has-icon {
+  padding-left: 44px !important;
+}
+
+/* Evita que números ou setas nativas empurrem o conteúdo sobre o ícone */
+input[type="number"].has-icon-left,
+input[type="datetime-local"].has-icon-left {
+  padding-left: 44px !important;
+}
+
+.input-dark:focus {
+  border-color: #EF4444;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 50%, #B91C1C 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px -3px rgba(220, 38, 38, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #F87171 0%, #EF4444 50%, #DC2626 100%);
+  box-shadow: 0 8px 25px -4px rgba(220, 38, 38, 0.55);
+  transform: translateY(-1px);
+}
+
+.badge-red {
+  background: rgba(220, 38, 38, 0.15);
+  color: #FCA5A5;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-blue {
+  background: rgba(220, 38, 38, 0.15);
+  color: #FCA5A5;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Certificate Print Rules */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+}

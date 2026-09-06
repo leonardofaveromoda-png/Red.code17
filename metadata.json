@@ -1,0 +1,8 @@
+{
+  "name": "RED CODE - Emissão de Certificados & Gestão de Treinamentos APH",
+  "description": "Plataforma oficial RED CODE para gestão de minicursos APH, inscrições com validação de pagamento, emissão e download de certificados digitais em PDF, e edição completa de eventos e rodapé.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
